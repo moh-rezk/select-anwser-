@@ -1,0 +1,31 @@
+
+body{
+    
+    background-image: url(../image/Wave-100s-1366px\ \(2\).svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+
+
+}
+
+.text-spec
+{
+    color: #653383
+}
+.bg-spec
+{
+   background-color:  #653383
+}
+button{
+    cursor: pointer;
+}
+#quiz,#finish,#Correct,#inCorrect,.alert
+{
+    display: none;
+    
+}

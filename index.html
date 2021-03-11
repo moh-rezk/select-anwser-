@@ -1,0 +1,148 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+
+<body>
+
+  <section class=" h-25">
+    <div class=" backgroud-page">
+      <svg viewBox="0 0 1440 320">
+
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgb(130, 124, 189);stop-opacity:1" />
+        </linearGradient>
+
+
+        <path fill="url(#grad1)" fill-opacity="0.1" d="M0,288L12.6,261.3C25.3,235,51,181,76,186.7C101.1,192,126,256,152,266.7C176.8,277,202,235,227,181.3C252.6,128,278,64,303,53.3C328.4,43,354,85,379,90.7C404.2,96,429,64,455,69.3C480,75,505,117,531,128C555.8,139,581,117,606,133.3C631.6,149,657,203,682,208C707.4,213,733,171,758,128C783.2,85,808,43,834,26.7C858.9,11,884,21,909,37.3C934.7,53,960,75,985,96C1010.5,117,1036,139,1061,122.7C1086.3,107,1112,53,1137,53.3C1162.1,53,1187,107,1213,138.7C1237.9,171,1263,181,1288,197.3C1313.7,213,1339,235,1364,245.3C1389.5,256,1415,256,1427,256L1440,256L1440,0L1427.4,0C1414.7,0,1389,0,1364,0C1338.9,0,1314,0,1288,0C1263.2,0,1238,0,1213,0C1187.4,0,1162,0,1137,0C1111.6,0,1086,0,1061,0C1035.8,0,1011,0,985,0C960,0,935,0,909,0C884.2,0,859,0,834,0C808.4,0,783,0,758,0C732.6,0,707,0,682,0C656.8,0,632,0,606,0C581.1,0,556,0,531,0C505.3,0,480,0,455,0C429.5,0,404,0,379
+        ,0C353.7,0,328,0,303,0C277.9,0,253,0,227,0C202.1,0,177,0,152,0C126.3,0,101,0,76,0C50.5,0,25,0,13,0L0,0Z">
+        </path>
+      </svg>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="setting">
+    <div class=" w-50 m-auto  bg-white rounded-lg shadow-lg overflow-auto ">
+
+
+      <h3 class="text-center text-spec py-5 border-bottom "> Setting Your Quiz</h3>
+      <div class=" p-3">
+
+        <div class="  m-3 form-group">
+          <label for="category" class="text-spec">Category</label>
+          <select name="category" id="category" class=" form-control">
+            <option value="9">General Knowledge</option>
+            <option value="27">Animals</option>
+            <option value="15">Video Games</option>
+            <option value="23">History</option>
+            <option value="21">Sports</option>
+            <option value="18">Science: Computers</option>
+          </select>
+        </div>
+
+        <div class=" mx-3 form-group">
+          <div class="form-group">
+            <label for="difficulty" class="text-spec"> Difficulty</label>
+            <div class="form-check" id="difficulty">
+
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="difficulty" id="easy" value="easy" checked>
+                Easy
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="difficulty" id="medium" value="medium">
+                Medium
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="difficulty" id="hard" value="hard">
+                Hard
+              </label>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+      <div class="mx-4 form-group">
+        <input type="number" class=" form-control p-1" id="numberOfQuestions" placeholder=" number of Questions ">
+      </div>
+
+
+      <button id="stratBtn" class="btn float-right rounded-pill bg-spec text-white px-4 m-3 "> start</button>
+
+
+    </div>
+  </section>
+
+
+  <section id="quiz">
+    <div class="bg-white w-50 m-auto shadow-lg rounded-lg  overflow-auto">
+        <div class="p-3 bg-light border-bottom overflow-auto">
+            <h1 class="text-spec text-center">Quiz</h1>
+            <span class="float-right bg-spec rounded-pill text-white p-2 ">
+                <span id="current"></span> Of <span
+                    id="totalAmount"></span> Question</span>
+
+            <span id="inCorrect" class="btn btn-danger float-left">InCorrect</span>
+            <span id="Correct" class="btn btn-success float-left">Correct</span>
+            <div class="clearFix"></div>
+
+        </div>
+
+        <div class="p-4 text-spec">
+            <h5 class="d-inline">Q: </h5>
+            <h5 id="question" class="d-inline"></h5>
+            <div id="rowAnswer">
+                
+            </div>
+            <div class="alert alert-danger mt-3">Please Choose Your Answer</div>
+            <button class="btn float-right py-2 px-4 bg-spec rounded-pill text-white my-4" id="next">Submit</button>
+        </div>
+    </div>
+</section>
+
+ <section id="finish">
+    
+  <div class="bg-white w-50 m-auto shadow-lg rounded overflow-auto text-center">
+      <h1 class=" text-spec py-5 bg-light border-bottom">fininsh</h1>
+      <div class="p-4">
+      <h5 class=" text-spec">score</h5>
+      <h4 class=" text-spec" id="score"></h4>
+      <button  class="btn float-right py-2 px-4 bg-spec rounded-pill text-white my-4" id="tryBtn">Try Again?</button>
+  </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <footer>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+  </footer>
+</body>
+
+</html>
